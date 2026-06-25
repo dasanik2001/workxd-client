@@ -1,4 +1,4 @@
-# Plan: WorkXD.com High-Fidelity Website Mockup
+# Plan: WorkXD.com WorkXD
 
 ## Context
 

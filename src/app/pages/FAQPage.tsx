@@ -65,7 +65,7 @@ export function FAQPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="text-4xl mb-4">❓</div>
           <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-4">

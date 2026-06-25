@@ -1,11 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { Clock, BarChart2, Award, CheckCircle2, Star, FileText, Presentation } from "lucide-react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { CertificateMockup } from "../components/CertificateMockup";
 import { FAQAccordion } from "../components/FAQAccordion";
 import { SectionWrapper, SectionHeading } from "../components/SectionWrapper";
+import { EnrollModal } from "../components/EnrollModal";
+
+const PROJECT = {
+  id: "gtm-d2c-brand",
+  title: "Go-to-Market Strategy for a D2C Brand",
+  price: 999,
+  brand: "MarketSpark",
+};
 
 const skills = ["Market Research", "GTM Strategy", "Competitor Analysis", "Brand Positioning", "Consumer Insights", "Presentation Design", "Strategic Thinking", "Data Synthesis"];
 const tools = ["Google Analytics", "SimilarWeb", "Canva", "PowerPoint", "Excel", "Google Trends", "Meta Ads Library"];
@@ -39,14 +46,15 @@ const reviews = [
 ];
 
 export function ProjectPage() {
-  const [enrolling, setEnrolling] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <div style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", backgroundColor: "var(--workxd-bg)" }}>
+      <EnrollModal open={modalOpen} onClose={() => setModalOpen(false)} project={PROJECT} />
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <div className="grid lg:grid-cols-3 gap-10 items-start">
             {/* Main content */}
@@ -78,20 +86,20 @@ export function ProjectPage() {
             </div>
 
             {/* Sticky enrollment card */}
-            <div className="bg-white border rounded-2xl p-6 shadow-lg sticky top-20" style={{ borderColor: "var(--workxd-border)" }}>
+            <div className=" border rounded-2xl p-6 shadow-lg sticky top-20" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="flex items-baseline gap-1 mb-1">
                 <span style={{ fontSize: "32px", fontWeight: 800, color: "var(--workxd-dark)" }}>₹999</span>
                 <span className="text-sm" style={{ color: "var(--workxd-text-subtle)" }}>one-time</span>
               </div>
               <p className="text-xs mb-4" style={{ color: "var(--workxd-green)" }}>✓ Full access · Certificate included · CV points included</p>
               <button
-                onClick={() => setEnrolling(true)}
+                onClick={() => setModalOpen(true)}
                 className="w-full py-3.5 rounded-xl text-white font-semibold hover:opacity-90 transition-opacity mb-3"
                 style={{ backgroundColor: "#F97316" }}
               >
-                {enrolling ? "Enrolling..." : "Enroll Now — ₹999"}
+                Enroll Now — ₹999
               </button>
-              <button className="w-full py-3 rounded-xl font-semibold border hover:bg-gray-50 transition-colors text-sm" style={{ borderColor: "var(--workxd-border)", color: "var(--workxd-text-body)" }}>
+              <button className="w-full py-3 rounded-xl font-semibold border hover:transition-colors text-sm" style={{ borderColor: "var(--workxd-border)", color: "var(--workxd-text-body)" }}>
                 Preview Project Brief
               </button>
               <div className="mt-4 space-y-2">
@@ -110,7 +118,7 @@ export function ProjectPage() {
       <SectionWrapper bg="gray">
         <div className="max-w-3xl">
           <SectionHeading label="The Challenge" title="Problem Statement" />
-          <div className="bg-white border rounded-xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <p className="text-base leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>
               <strong style={{ color: "var(--workxd-dark)" }}>MarketSpark</strong> is launching a new D2C skincare brand targeting urban Indian millennials aged 22–34.
               The brand has a product line ready but lacks a clear go-to-market strategy. Your challenge is to research the market,
@@ -126,7 +134,7 @@ export function ProjectPage() {
           <SectionHeading label="Objective" title="What You'll Achieve" />
           <div className="grid sm:grid-cols-2 gap-4">
             {["Understand the Indian D2C skincare market size and trends", "Identify the 3 most attractive customer segments", "Analyse 10 competing brands using strategic frameworks", "Recommend a differentiated positioning strategy", "Design a phased go-to-market roadmap", "Project Year 1 revenue targets and key metrics"].map((o, i) => (
-              <div key={o} className="flex items-start gap-3 p-4 bg-gray-50 rounded-xl">
+              <div key={o} className="flex items-start gap-3 p-4 rounded-xl">
                 <div className="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold text-white shrink-0" style={{ backgroundColor: "var(--workxd-blue)" }}>{i + 1}</div>
                 <p className="text-sm" style={{ color: "var(--workxd-text-body)" }}>{o}</p>
               </div>
@@ -140,7 +148,7 @@ export function ProjectPage() {
         <SectionHeading label="Deliverables" title="What You'll Build" subtitle="Four professional-grade deliverables you can add to your portfolio." />
         <div className="grid sm:grid-cols-2 gap-4 max-w-3xl">
           {deliverables.map((d) => (
-            <div key={d.label} className="bg-white border rounded-xl p-5 flex gap-4" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={d.label} className=" border rounded-xl p-5 flex gap-4" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--domain-marketing-bg)", color: "var(--workxd-blue)" }}>
                 {d.icon}
               </div>
@@ -180,7 +188,7 @@ export function ProjectPage() {
         <SectionHeading label="Resume Impact" title="What Goes On Your CV" subtitle="WorkXD provides 4 specific, quantified bullet points you can add directly to your resume." />
         <div className="space-y-3 max-w-3xl">
           {cvBullets.map((bullet, i) => (
-            <div key={i} className="bg-white border rounded-xl p-4 flex items-start gap-3" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={i} className=" border rounded-xl p-4 flex items-start gap-3" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white shrink-0 mt-0.5" style={{ backgroundColor: "var(--workxd-green)" }}>✓</div>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>{bullet}</p>
             </div>
@@ -209,7 +217,7 @@ export function ProjectPage() {
       <SectionWrapper bg="gray">
         <div className="max-w-2xl">
           <SectionHeading label="Brand" title="About MarketSpark" />
-          <div className="bg-white border rounded-xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg" style={{ backgroundColor: "var(--workxd-blue)" }}>M</div>
               <div>
@@ -231,7 +239,7 @@ export function ProjectPage() {
         <SectionHeading label="Reviews" title="What Students Say" />
         <div className="grid md:grid-cols-3 gap-5">
           {reviews.map((r) => (
-            <div key={r.name} className="bg-white border rounded-xl p-5" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={r.name} className=" border rounded-xl p-5" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="flex gap-0.5 mb-3">
                 {Array.from({ length: r.rating }).map((_, i) => <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />)}
               </div>
@@ -270,6 +278,7 @@ export function ProjectPage() {
             Join 128 students who've completed this project and earned their MarketSpark certificate.
           </p>
           <button
+            onClick={() => setModalOpen(true)}
             className="px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition-opacity"
             style={{ backgroundColor: "#F97316", color: "white" }}
           >

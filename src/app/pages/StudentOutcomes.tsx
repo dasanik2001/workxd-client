@@ -124,7 +124,7 @@ export function StudentOutcomes() {
             { icon: <Briefcase className="w-6 h-6" />, title: "Portfolio Deliverable", desc: "A professional-grade output you can share on LinkedIn, in applications, or during interviews.", iconBg: "#FFF7ED", iconColor: "#C2410C" },
             { icon: <MessageSquare className="w-6 h-6" />, title: "Interview Story", desc: "A structured STAR-format story from real project experience to answer competency questions.", iconBg: "#F5F3FF", iconColor: "#7C3AED" },
           ].map((o) => (
-            <div key={o.title} className="bg-white border rounded-xl p-6 flex flex-col gap-4" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={o.title} className=" border rounded-xl p-6 flex flex-col gap-4" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: o.iconBg, color: o.iconColor }}>{o.icon}</div>
               <div>
                 <h3 className="font-semibold mb-2" style={{ color: "var(--workxd-dark)", fontSize: "16px" }}>{o.title}</h3>
@@ -140,7 +140,7 @@ export function StudentOutcomes() {
         <SectionHeading label="Resume Impact" title="Before vs After WorkXD" subtitle="See how a WorkXD project transforms a typical MBA resume." center />
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Before */}
-          <div className="bg-white border rounded-xl p-6" style={{ borderColor: "#FCA5A5", backgroundColor: "#FFF5F5" }}>
+          <div className=" border rounded-xl p-6" style={{ borderColor: "#FCA5A5", backgroundColor: "#FFF5F5"}}>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center text-red-500 text-xs font-bold">✗</div>
               <h3 className="font-semibold" style={{ color: "var(--workxd-dark)" }}>Before WorkXD</h3>
@@ -152,7 +152,7 @@ export function StudentOutcomes() {
                 "Coursework: Marketing Management, Strategic Management",
                 "Skills: MS Office, basic Excel, PowerPoint",
               ].map((item) => (
-                <div key={item} className="text-sm p-3 bg-white rounded-lg border" style={{ borderColor: "#FCA5A5", color: "var(--workxd-text-muted)" }}>
+                <div key={item} className="text-sm p-3 rounded-lg border" style={{ backgroundColor: "var(--workxd-card)", borderColor: "#FCA5A5", color: "var(--workxd-text-muted)"}}>
                   {item}
                 </div>
               ))}
@@ -161,7 +161,7 @@ export function StudentOutcomes() {
           </div>
 
           {/* After */}
-          <div className="bg-white border rounded-xl p-6" style={{ borderColor: "#86EFAC", backgroundColor: "var(--domain-finance-bg)" }}>
+          <div className=" border rounded-xl p-6" style={{ borderColor: "#86EFAC", backgroundColor: "var(--domain-finance-bg)"}}>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center" style={{ color: "var(--workxd-green)" }}>
                 <CheckCircle2 className="w-4 h-4" />
@@ -175,7 +175,7 @@ export function StudentOutcomes() {
                 "Analysed 10 competitors, identifying 4 strategic whitespace opportunities",
                 "Built ₹50L Year 1 revenue model with CAC/LTV projections",
               ].map((item) => (
-                <div key={item} className="text-sm p-3 bg-white rounded-lg border flex items-start gap-2" style={{ borderColor: "#86EFAC", color: "var(--workxd-text-body)" }}>
+                <div key={item} className="text-sm p-3 rounded-lg border flex items-start gap-2" style={{ backgroundColor: "var(--workxd-card)", borderColor: "#86EFAC", color: "var(--workxd-text-body)"}}>
                   <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0" style={{ color: "var(--workxd-green)" }} />
                   {item}
                 </div>
@@ -210,7 +210,7 @@ export function StudentOutcomes() {
 
         <div className="space-y-3 max-w-3xl mx-auto">
           {domainBullets[activeTab].map((bullet, i) => (
-            <div key={i} className="bg-white border rounded-xl p-4 flex items-start gap-3" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={i} className=" border rounded-xl p-4 flex items-start gap-3" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={{ backgroundColor: "var(--workxd-green)" }}>✓</div>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>{bullet}</p>
             </div>
@@ -223,7 +223,7 @@ export function StudentOutcomes() {
         <SectionHeading label="Portfolio" title="What's In Your Portfolio" subtitle="Every WorkXD project produces professional-grade deliverables you can share anywhere." center />
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
           {portfolioItems.map((item) => (
-            <div key={item.label} className="bg-gray-50 border rounded-xl p-4 flex flex-col items-center text-center gap-2" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={item.label} className="border rounded-xl p-4 flex flex-col items-center text-center gap-2" style={{ borderColor: "var(--workxd-border)" }}>
               <div className="text-3xl">{item.icon}</div>
               <p className="text-sm font-semibold" style={{ color: "var(--workxd-dark)" }}>{item.label}</p>
               <p className="text-xs" style={{ color: "var(--workxd-text-subtle)" }}>{item.desc}</p>
@@ -267,7 +267,7 @@ export function StudentOutcomes() {
               a: "My FinEdge financial modelling project required me to build a 5-year DCF model for a SaaS company. I validated assumptions using industry benchmarks and presented my valuation to a panel, defending my methodology under scrutiny.",
             },
           ].map(({ q, a }) => (
-            <div key={q} className="bg-white border rounded-xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={q} className=" border rounded-xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <p className="text-sm font-semibold mb-3" style={{ color: "var(--workxd-blue)" }}>Q: {q}</p>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>A: {a}</p>
             </div>

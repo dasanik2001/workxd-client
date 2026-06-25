@@ -103,7 +103,7 @@ export function BrandsPage() {
         <SectionHeading label="In-House Brands" title="Our Brand Portfolio" center />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {brands.map((brand) => (
-            <div key={brand.name} className="bg-white border rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={brand.name} className=" border rounded-2xl p-6 flex flex-col gap-4 hover:shadow-md transition-shadow" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               {/* Brand header */}
               <div className="flex items-center gap-3">
                 <div
@@ -160,7 +160,7 @@ export function BrandsPage() {
         <SectionHeading label="Process" title="How Co-Branding Works" center />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
           {howCoBrandingWorks.map((step) => (
-            <div key={step.step} className="bg-white border rounded-xl p-5 text-center" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={step.step} className=" border rounded-xl p-5 text-center" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 text-white font-bold" style={{ backgroundColor: "var(--workxd-blue)" }}>{step.step}</div>
               <h3 className="font-semibold mb-2" style={{ color: "var(--workxd-dark)", fontSize: "14px" }}>{step.title}</h3>
               <p className="text-xs leading-relaxed" style={{ color: "var(--workxd-text-muted)" }}>{step.desc}</p>
@@ -192,7 +192,7 @@ export function BrandsPage() {
               </Link>
             </div>
           </div>
-          <div className="bg-gray-50 border rounded-2xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className="border rounded-2xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
             <div className="flex items-center gap-2 mb-4">
               <Award className="w-5 h-5" style={{ color: "var(--workxd-blue)" }} />
               <h3 className="font-semibold" style={{ color: "var(--workxd-dark)" }}>For Colleges (Coming Soon)</h3>

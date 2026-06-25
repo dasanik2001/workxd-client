@@ -72,7 +72,7 @@ export function PricingPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest block mb-4" style={{ color: "var(--workxd-blue)" }}>Pricing</span>
           <h1 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-4">

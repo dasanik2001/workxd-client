@@ -12,24 +12,24 @@ import { CertificateMockup } from "../components/CertificateMockup";
 // ─── Mock data ───────────────────────────────────────────────────────────────
 
 const students = [
-  { id: "WXD-2024-001", name: "Priya Sharma", email: "priya@iimb.ac.in", college: "IIM Bangalore", program: "MBA 2024", domain: "Marketing", project: "Go-to-Market Strategy", enrolled: "Dec 10, 2024", status: "Active", paid: "₹999" },
+  { id: "WXD-2024-001", name: "Priya Sharma", email: "priya@academic.ac.in", college: "IIM Bangalore", program: "MBA 2024", domain: "Marketing", project: "Go-to-Market Strategy", enrolled: "Dec 10, 2024", status: "Active", paid: "₹999" },
   { id: "WXD-2024-002", name: "Arjun Mehta", email: "arjun@xlri.ac.in", college: "XLRI Jamshedpur", program: "MBA 2024", domain: "Finance", project: "Financial Modelling", enrolled: "Dec 9, 2024", status: "Completed", paid: "₹999" },
   { id: "WXD-2024-003", name: "Sneha Kapoor", email: "sneha@mdi.ac.in", college: "MDI Gurgaon", program: "MBA 2023", domain: "Business Analytics", project: "Customer Segmentation Dashboard", enrolled: "Dec 8, 2024", status: "Active", paid: "₹2,499" },
   { id: "WXD-2024-004", name: "Rohit Joshi", email: "rohit@sibm.edu", college: "SIBM Pune", program: "MBA 2024", domain: "Consulting", project: "Market Entry Strategy", enrolled: "Dec 7, 2024", status: "Pending", paid: "₹999" },
   { id: "WXD-2024-005", name: "Karan Malhotra", email: "karan@nmims.edu", college: "NMIMS Mumbai", program: "MBA 2024", domain: "HR", project: "Recruitment Strategy", enrolled: "Dec 6, 2024", status: "Completed", paid: "₹999" },
   { id: "WXD-2024-006", name: "Divya Nair", email: "divya@iimk.ac.in", college: "IIM Kozhikode", program: "MBA 2024", domain: "Operations", project: "Supply Chain Optimization", enrolled: "Dec 5, 2024", status: "Active", paid: "₹2,499" },
-  { id: "WXD-2024-007", name: "Aditya Rao", email: "aditya@iimb.ac.in", college: "IIM Bangalore", program: "MBA 2025", domain: "Finance", project: "Equity Research Report", enrolled: "Dec 4, 2024", status: "Pending", paid: "₹999" },
+  { id: "WXD-2024-007", name: "Aditya Rao", email: "aditya@academic.ac.in", college: "IIM Bangalore", program: "MBA 2025", domain: "Finance", project: "Equity Research Report", enrolled: "Dec 4, 2024", status: "Pending", paid: "₹999" },
   { id: "WXD-2024-008", name: "Meera Singh", email: "meera@fms.ac.in", college: "FMS Delhi", program: "MBA 2024", domain: "Marketing", project: "Brand Positioning Strategy", enrolled: "Dec 3, 2024", status: "Completed", paid: "₹999" },
 ];
 
 const invoices = [
-  { id: "INV-2024-0891", student: "Priya Sharma", email: "priya@iimb.ac.in", plan: "Starter", amount: "₹999", date: "Dec 10, 2024", status: "Paid", project: "Go-to-Market Strategy" },
+  { id: "INV-2024-0891", student: "Priya Sharma", email: "priya@academic.ac.in", plan: "Starter", amount: "₹999", date: "Dec 10, 2024", status: "Paid", project: "Go-to-Market Strategy" },
   { id: "INV-2024-0890", student: "Arjun Mehta", email: "arjun@xlri.ac.in", plan: "Starter", amount: "₹999", date: "Dec 9, 2024", status: "Paid", project: "Financial Modelling" },
   { id: "INV-2024-0889", student: "Sneha Kapoor", email: "sneha@mdi.ac.in", plan: "Pro", amount: "₹2,499", date: "Dec 8, 2024", status: "Paid", project: "Customer Segmentation Dashboard" },
   { id: "INV-2024-0888", student: "Rohit Joshi", email: "rohit@sibm.edu", plan: "Starter", amount: "₹999", date: "Dec 7, 2024", status: "Pending", project: "Market Entry Strategy" },
   { id: "INV-2024-0887", student: "Karan Malhotra", email: "karan@nmims.edu", plan: "Starter", amount: "₹999", date: "Dec 6, 2024", status: "Paid", project: "Recruitment Strategy" },
   { id: "INV-2024-0886", student: "Divya Nair", email: "divya@iimk.ac.in", plan: "Pro", amount: "₹2,499", date: "Dec 5, 2024", status: "Paid", project: "Supply Chain Optimization" },
-  { id: "INV-2024-0885", student: "Aditya Rao", email: "aditya@iimb.ac.in", plan: "Starter", amount: "₹999", date: "Dec 4, 2024", status: "Refunded", project: "Equity Research Report" },
+  { id: "INV-2024-0885", student: "Aditya Rao", email: "aditya@academic.ac.in", plan: "Starter", amount: "₹999", date: "Dec 4, 2024", status: "Refunded", project: "Equity Research Report" },
 ];
 
 const domainBrands: Record<string, string> = {
@@ -110,7 +110,7 @@ export function AdminDashboard() {
 
   return (
     <div
-      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", backgroundColor: bg, minHeight: "100vh", display: "flex" }}
+      style={{ fontFamily: "'Plus Jakarta Sans', sans-serif", backgroundColor: "var(--workxd-bg)", minHeight: "100vh", display: "flex" }}
     >
       {/* Sidebar */}
       <aside

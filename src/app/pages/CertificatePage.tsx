@@ -27,7 +27,7 @@ export function CertificatePage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <div className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6" style={{ backgroundColor: "var(--domain-marketing-bg)" }}>
             <Award className="w-8 h-8" style={{ color: "var(--workxd-blue)" }} />
@@ -62,7 +62,7 @@ export function CertificatePage() {
             { icon: <Award className="w-6 h-6" />, title: "Domain-Specific Branding", desc: "Each certificate clearly shows the domain (Marketing, Finance, etc.) and the specific project — so recruiters instantly understand your specialisation.", bg: "#FFF1F2", color: "#BE123C" },
             { icon: <CheckCircle2 className="w-6 h-6" />, title: "Accompanied by CV Points", desc: "The certificate always comes with 4 professionally-written CV bullet points — turning a document into actual placement ammunition.", bg: "#ECFDF5", color: "#047857" },
           ].map((item) => (
-            <div key={item.title} className="bg-white border rounded-xl p-6 flex flex-col gap-3" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={item.title} className=" border rounded-xl p-6 flex flex-col gap-3" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center" style={{ backgroundColor: item.bg, color: item.color }}>{item.icon}</div>
               <h3 className="font-semibold" style={{ color: "var(--workxd-dark)", fontSize: "16px" }}>{item.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-muted)" }}>{item.desc}</p>
@@ -76,7 +76,7 @@ export function CertificatePage() {
         <SectionHeading label="Verification" title="How Certificate Verification Works" center subtitle="Recruiters can verify any WorkXD certificate in under a minute." />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
           {verificationSteps.map((s) => (
-            <div key={s.step} className="bg-white border rounded-xl p-5 text-center" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={s.step} className=" border rounded-xl p-5 text-center" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 text-white font-bold" style={{ backgroundColor: "var(--workxd-blue)" }}>{s.step}</div>
               <h3 className="font-semibold mb-2" style={{ color: "var(--workxd-dark)", fontSize: "15px" }}>{s.title}</h3>
               <p className="text-sm" style={{ color: "var(--workxd-text-muted)" }}>{s.desc}</p>

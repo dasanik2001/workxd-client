@@ -57,7 +57,7 @@ export function HowItWorks() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest block mb-4" style={{ color: "var(--workxd-blue)" }}>The Process</span>
           <h1 style={{ fontSize: "clamp(32px, 5vw, 52px)", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-4">
@@ -74,7 +74,7 @@ export function HowItWorks() {
       <SectionWrapper bg="gray">
         <div className="space-y-8 max-w-4xl mx-auto">
           {steps.map((step, index) => (
-            <div key={step.step} className="bg-white border rounded-2xl p-8 flex flex-col md:flex-row gap-8" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={step.step} className=" border rounded-2xl p-8 flex flex-col md:flex-row gap-8" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               {/* Step number + icon */}
               <div className="flex flex-col items-center gap-4 md:w-24 shrink-0">
                 <div
@@ -85,7 +85,7 @@ export function HowItWorks() {
                 </div>
                 <span className="text-xs font-bold uppercase tracking-widest" style={{ color: "var(--workxd-text-subtle)" }}>Step {step.step}</span>
                 {index < steps.length - 1 && (
-                  <div className="hidden md:block w-0.5 h-8 mt-2" style={{ backgroundColor: "#E5E7EB" }} />
+                  <div className="hidden md:block w-0.5 h-8 mt-2" style={{ backgroundColor: "var(--workxd-border)" }} />
                 )}
               </div>
 
@@ -129,7 +129,7 @@ export function HowItWorks() {
             { title: "Expert Review", desc: "Every submission is reviewed by industry professionals — not AI or automation.", emoji: "👨‍💼" },
             { title: "Interview Stories", desc: "Build specific STAR-format stories that answer 'Tell me about a time when...' with confidence.", emoji: "🎯" },
           ].map((b) => (
-            <div key={b.title} className="bg-gray-50 rounded-xl p-5 border" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={b.title} className="rounded-xl p-5 border" style={{ borderColor: "var(--workxd-border)" }}>
               <div className="text-3xl mb-3">{b.emoji}</div>
               <h3 className="font-semibold mb-2" style={{ color: "var(--workxd-dark)", fontSize: "16px" }}>{b.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-muted)" }}>{b.desc}</p>

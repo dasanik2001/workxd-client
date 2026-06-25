@@ -253,7 +253,7 @@ export function HomePage() {
                   <div className="w-full rounded-full h-1.5" style={{ backgroundColor: "var(--workxd-border)" }}>
                     <div className="h-1.5 rounded-full" style={{ width: "65%", backgroundColor: "var(--workxd-blue)" }} />
                   </div>
-                  <p className="text-xs mt-1" style={{ color: "var(--workxd-text-muted)" }}>65% complete</p>
+                  <p className="text-xs mt-1" style={{ color: "var(--workxd-text-muted)" }}>5% complete</p>
                 </div>
 
                 {/* Deliverables */}
@@ -293,7 +293,7 @@ export function HomePage() {
                   <Users className="w-4 h-4" style={{ color: "var(--workxd-green)" }} />
                 </div>
                 <div>
-                  <p className="text-xs font-bold" style={{ color: "var(--workxd-dark)" }}>5,000+</p>
+                  <p className="text-xs font-bold" style={{ color: "var(--workxd-dark)" }}>,000+</p>
                   <p className="text-xs" style={{ color: "var(--workxd-text-subtle)" }}>Students enrolled</p>
                 </div>
               </div>

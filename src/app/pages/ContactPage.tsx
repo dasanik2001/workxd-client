@@ -20,7 +20,7 @@ export function ContactPage() {
     setPartnerSubmitted(true);
   };
 
-  const inputClass = "w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 bg-white";
+  const inputClass = "w-full px-4 py-3 rounded-xl border text-sm outline-none focus:ring-2 ";
   const inputStyle = { borderColor: "var(--workxd-border)", color: "var(--workxd-dark)" };
 
   return (
@@ -28,7 +28,7 @@ export function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest block mb-4" style={{ color: "var(--workxd-blue)" }}>Contact</span>
           <h1 style={{ fontSize: "clamp(28px, 4vw, 48px)", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-3">
@@ -48,7 +48,7 @@ export function ContactPage() {
               { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+91 98765 43210", note: "Mon–Fri, 10am–6pm IST" },
               { icon: <MessageCircle className="w-5 h-5" />, label: "WhatsApp", value: "+91 98765 43210", note: "For quick queries" },
             ].map((item) => (
-              <div key={item.label} className="bg-white border rounded-xl p-4 flex gap-3" style={{ borderColor: "var(--workxd-border)" }}>
+              <div key={item.label} className=" border rounded-xl p-4 flex gap-3" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
                 <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: "var(--domain-marketing-bg)", color: "var(--workxd-blue)" }}>{item.icon}</div>
                 <div>
                   <p className="text-xs font-semibold" style={{ color: "var(--workxd-text-subtle)" }}>{item.label}</p>
@@ -60,7 +60,7 @@ export function ContactPage() {
           </div>
 
           {/* General contact form */}
-          <div className="bg-white border rounded-2xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-2xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <h2 style={{ fontSize: "18px", fontWeight: 700, color: "var(--workxd-dark)" }} className="mb-5">Send a Message</h2>
             {submitted ? (
               <div className="text-center py-8">
@@ -101,7 +101,7 @@ export function ContactPage() {
           </div>
 
           {/* Partnership form */}
-          <div className="bg-white border rounded-2xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-2xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <h2 style={{ fontSize: "18px", fontWeight: 700, color: "var(--workxd-dark)" }} className="mb-1">Partnership Inquiry</h2>
             <p className="text-xs mb-5" style={{ color: "var(--workxd-text-muted)" }}>For B-Schools, colleges, or brands interested in partnering with WorkXD.</p>
             {partnerSubmitted ? (

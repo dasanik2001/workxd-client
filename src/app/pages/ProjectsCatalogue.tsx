@@ -56,7 +56,7 @@ export function ProjectsCatalogue() {
       <Navbar />
 
       {/* Page header */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className="border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <h1 style={{ fontSize: "36px", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-2">
             Browse All Projects
@@ -74,13 +74,13 @@ export function ProjectsCatalogue() {
                 placeholder="Search projects by title, domain, or skill..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border bg-white text-sm outline-none focus:ring-2"
-                style={{ borderColor: "var(--workxd-border)", color: "var(--workxd-dark)" }}
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm outline-none focus:ring-2"
+                style={{ backgroundColor: "var(--workxd-surface-input)", borderColor: "var(--workxd-border)", color: "var(--workxd-dark)" }}
               />
             </div>
             <button
               onClick={() => setFiltersOpen(!filtersOpen)}
-              className="flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium transition-colors hover:bg-gray-50"
+              className="flex items-center gap-2 px-4 py-2.5 rounded-xl border text-sm font-medium transition-colors"
               style={{ borderColor: "var(--workxd-border)", color: "var(--workxd-text-body)" }}
             >
               <SlidersHorizontal className="w-4 h-4" />
@@ -109,9 +109,9 @@ export function ProjectsCatalogue() {
                       onClick={() => setSelectedDomain(d)}
                       className="px-3 py-1 rounded-full text-xs font-medium border transition-colors"
                       style={{
-                        backgroundColor: selectedDomain === d ? "#0056D2" : "white",
-                        color: selectedDomain === d ? "white" : "#374151",
-                        borderColor: selectedDomain === d ? "#0056D2" : "#E5E7EB",
+                        backgroundColor: selectedDomain === d ? "var(--workxd-blue)" : "var(--workxd-surface-input)",
+                        color: selectedDomain === d ? "white" : "var(--workxd-text-body)",
+                        borderColor: selectedDomain === d ? "var(--workxd-blue)" : "var(--workxd-border)",
                       }}
                     >
                       {d}
@@ -128,9 +128,9 @@ export function ProjectsCatalogue() {
                       onClick={() => setSelectedDifficulty(d)}
                       className="px-3 py-1 rounded-full text-xs font-medium border transition-colors"
                       style={{
-                        backgroundColor: selectedDifficulty === d ? "#0056D2" : "white",
-                        color: selectedDifficulty === d ? "white" : "#374151",
-                        borderColor: selectedDifficulty === d ? "#0056D2" : "#E5E7EB",
+                        backgroundColor: selectedDifficulty === d ? "var(--workxd-blue)" : "var(--workxd-surface-input)",
+                        color: selectedDifficulty === d ? "white" : "var(--workxd-text-body)",
+                        borderColor: selectedDifficulty === d ? "var(--workxd-blue)" : "var(--workxd-border)",
                       }}
                     >
                       {d}
@@ -147,9 +147,9 @@ export function ProjectsCatalogue() {
                       onClick={() => setSelectedDuration(d)}
                       className="px-3 py-1 rounded-full text-xs font-medium border transition-colors"
                       style={{
-                        backgroundColor: selectedDuration === d ? "#0056D2" : "white",
-                        color: selectedDuration === d ? "white" : "#374151",
-                        borderColor: selectedDuration === d ? "#0056D2" : "#E5E7EB",
+                        backgroundColor: selectedDuration === d ? "var(--workxd-blue)" : "var(--workxd-surface-input)",
+                        color: selectedDuration === d ? "white" : "var(--workxd-text-body)",
+                        borderColor: selectedDuration === d ? "var(--workxd-blue)" : "var(--workxd-border)",
                       }}
                     >
                       {d}

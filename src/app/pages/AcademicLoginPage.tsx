@@ -73,7 +73,7 @@ export function AcademicLoginPage() {
               </label>
               <input
                 type="email"
-                placeholder="priya@iimb.ac.in"
+                placeholder="priya@academic.ac.in"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl border text-sm outline-none transition-all"

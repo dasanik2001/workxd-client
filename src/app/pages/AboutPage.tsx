@@ -38,7 +38,7 @@ export function AboutPage() {
       {/* Mission & Vision */}
       <SectionWrapper bg="white">
         <div className="grid lg:grid-cols-2 gap-12">
-          <div className="bg-white border rounded-2xl p-8" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-2xl p-8" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <div className="text-3xl mb-4">🎯</div>
             <h2 style={{ fontSize: "24px", fontWeight: 700, color: "var(--workxd-dark)" }} className="mb-3">Our Mission</h2>
             <p className="text-base leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>
@@ -46,7 +46,7 @@ export function AboutPage() {
               to real business projects, co-branded certificates, and portfolio-worthy proof of skills before they graduate.
             </p>
           </div>
-          <div className="bg-white border rounded-2xl p-8" style={{ borderColor: "var(--workxd-border)" }}>
+          <div className=" border rounded-2xl p-8" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
             <div className="text-3xl mb-4">🔭</div>
             <h2 style={{ fontSize: "24px", fontWeight: 700, color: "var(--workxd-dark)" }} className="mb-3">Our Vision</h2>
             <p className="text-base leading-relaxed" style={{ color: "var(--workxd-text-body)" }}>
@@ -88,7 +88,7 @@ export function AboutPage() {
               { value: "200+", label: "Projects available" },
               { value: "84%", label: "Placement improvement" },
             ].map((s) => (
-              <div key={s.label} className="bg-white border rounded-xl p-5 text-center" style={{ borderColor: "var(--workxd-border)" }}>
+              <div key={s.label} className=" border rounded-xl p-5 text-center" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
                 <div style={{ fontSize: "32px", fontWeight: 800, color: "var(--workxd-blue)" }}>{s.value}</div>
                 <div className="text-xs mt-1" style={{ color: "var(--workxd-text-muted)" }}>{s.label}</div>
               </div>
@@ -102,7 +102,7 @@ export function AboutPage() {
         <SectionHeading label="The Team" title="Who's Behind WorkXD" center subtitle="A team of MBAs, consultants, and product builders who've lived the problem firsthand." />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {team.map((member) => (
-            <div key={member.name} className="bg-white border rounded-xl p-5 text-center flex flex-col items-center gap-3" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={member.name} className=" border rounded-xl p-5 text-center flex flex-col items-center gap-3" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div
                 className="w-16 h-16 rounded-2xl flex items-center justify-center text-white text-xl font-bold"
                 style={{ backgroundColor: member.color }}
@@ -133,7 +133,7 @@ export function AboutPage() {
                   >
                     {item.year}
                   </div>
-                  {i < roadmap.length - 1 && <div className="w-0.5 h-10 mt-2" style={{ backgroundColor: "#E5E7EB" }} />}
+                  {i < roadmap.length - 1 && <div className="w-0.5 h-10 mt-2" style={{ backgroundColor: "var(--workxd-border)" }} />}
                 </div>
                 <div className="pb-6">
                   <h3 className="font-semibold mb-1" style={{ color: "var(--workxd-dark)", fontSize: "16px" }}>{item.milestone}</h3>

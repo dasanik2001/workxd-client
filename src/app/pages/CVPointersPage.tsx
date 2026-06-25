@@ -49,7 +49,7 @@ export function CVPointersPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -67,7 +67,7 @@ export function CVPointersPage() {
             </div>
 
             {/* Sample bullet card */}
-            <div className="bg-white border rounded-xl p-6" style={{ borderColor: "var(--workxd-border)" }}>
+            <div className=" border rounded-xl p-6" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div className="flex items-center gap-2 mb-4">
                 <FileText className="w-5 h-5" style={{ color: "var(--workxd-blue)" }} />
                 <span className="text-sm font-semibold" style={{ color: "var(--workxd-blue)" }}>Sample CV Section</span>
@@ -99,7 +99,7 @@ export function CVPointersPage() {
         <SectionHeading label="Recruiter Perspective" title="Why Recruiters Care About These Bullet Points" center />
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {whyRecruiters.map((w) => (
-            <div key={w.title} className="bg-white border rounded-xl p-5" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={w.title} className=" border rounded-xl p-5" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <h3 className="font-semibold mb-2" style={{ color: "var(--workxd-dark)", fontSize: "15px" }}>{w.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: "var(--workxd-text-muted)" }}>{w.desc}</p>
             </div>

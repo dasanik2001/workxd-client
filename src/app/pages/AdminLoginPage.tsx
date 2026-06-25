@@ -143,7 +143,7 @@ export function AdminLoginPage() {
           ) : (
             <form onSubmit={handleOTP} className="space-y-4">
               <div>
-                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--workxd-text-body)" }}>6-Digit OTP</label>
+                <label className="block text-xs font-semibold mb-1.5" style={{ color: "var(--workxd-text-body)" }}>-Digit OTP</label>
                 <div className="relative">
                   <Lock className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4" style={{ color: "var(--workxd-text-muted)" }} />
                   <input

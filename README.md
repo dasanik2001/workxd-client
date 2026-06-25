@@ -1,7 +1,7 @@
 
-  # High-fidelity website mockup
+  # WorkXD
 
-  This is a code bundle for High-fidelity website mockup. The original project is available at https://www.figma.com/design/OkyTspfaMQUCFoPGpDE0dt/High-fidelity-website-mockup.
+  This is a code bundle for WorkXD. The original project is available at https://www.figma.com/design/OkyTspfaMQUCFoPGpDE0dt/High-fidelity-website-mockup.
 
   ## Running the code
 

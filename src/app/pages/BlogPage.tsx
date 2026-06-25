@@ -28,7 +28,7 @@ export function BlogPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <span className="text-xs font-semibold uppercase tracking-widest block mb-3" style={{ color: "var(--workxd-blue)" }}>WorkXD Blog</span>
           <h1 style={{ fontSize: "clamp(28px, 4vw, 44px)", fontWeight: 800, color: "var(--workxd-dark)" }} className="mb-2">

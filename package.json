@@ -1,11 +1,13 @@
 {
-  "name": "@figma/my-make-file",
+  "name": "@work-xd",
   "private": true,
   "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "dev": "vite"
+    "dev": "vite",
+    "server": "node server/index.js",
+    "dev:full": "concurrently \"npm run dev\" \"npm run server\""
   },
   "dependencies": {
     "@emotion/react": "11.14.0",
@@ -68,6 +70,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "concurrently": "^10.0.3",
     "tailwindcss": "4.1.12",
     "vite": "6.3.5"
   },

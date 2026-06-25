@@ -55,7 +55,7 @@ export function DomainPage() {
       <Navbar />
 
       {/* Hero */}
-      <div className="bg-white border-b" style={{ borderColor: "var(--workxd-border)" }}>
+      <div className=" border-b" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -87,7 +87,7 @@ export function DomainPage() {
                 </Link>
                 <Link
                   to="/project/go-to-market"
-                  className="px-5 py-3 rounded-xl font-semibold border hover:bg-gray-50 transition-colors flex items-center gap-2"
+                  className="px-5 py-3 rounded-xl font-semibold border hover:transition-colors flex items-center gap-2"
                   style={{ borderColor: "var(--workxd-border)", color: "var(--workxd-dark)" }}
                 >
                   See a Sample Project <ArrowRight className="w-4 h-4" />
@@ -103,7 +103,7 @@ export function DomainPage() {
                 { label: "Students Enrolled", value: "1,800+" },
                 { label: "Certificates Issued", value: "1,200+" },
               ].map((s) => (
-                <div key={s.label} className="bg-white border rounded-xl p-5 text-center" style={{ borderColor: "var(--workxd-border)" }}>
+                <div key={s.label} className=" border rounded-xl p-5 text-center" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
                   <div style={{ fontSize: "32px", fontWeight: 800, color: "var(--workxd-blue)" }}>{s.value}</div>
                   <div className="text-xs mt-1" style={{ color: "var(--workxd-text-muted)" }}>{s.label}</div>
                 </div>
@@ -174,7 +174,7 @@ export function DomainPage() {
             { value: "₹8.5L", label: "Average first salary" },
             { value: "90 days", label: "Average time to placement" },
           ].map((s) => (
-            <div key={s.label} className="bg-white border rounded-xl p-5 text-center" style={{ borderColor: "var(--workxd-border)" }}>
+            <div key={s.label} className=" border rounded-xl p-5 text-center" style={{ backgroundColor: "var(--workxd-card)", borderColor: "var(--workxd-border)"}}>
               <div style={{ fontSize: "28px", fontWeight: 800, color: "var(--workxd-blue)" }}>{s.value}</div>
               <div className="text-xs mt-1" style={{ color: "var(--workxd-text-muted)" }}>{s.label}</div>
             </div>
